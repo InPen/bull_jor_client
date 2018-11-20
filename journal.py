@@ -1,11 +1,19 @@
-from flask import Flask, render_template
+# ma dependencies
+from flask import Flask, render_template, redirect, url_for, request
 # web server
 app = Flask(__name__)
-# first route
-@app.route('/')
-
-def index():
-    return render_template('index.html')
+# first route. login
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    # logic to handle POST request
+    if request.method == 'POST':
+        # if the method is post, check user input
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid username or password, please try again'
+        else:
+            return redirect(url_for('home'))
+    return render_template('login.html', error=error)
 # second route
 @app.route('/home')
 def home():
