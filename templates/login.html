@@ -3,12 +3,12 @@
   <head>
     <title>Bullet Journal - LogIn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
   </head>
   <body>
 <!-- log in -->
     <div class="container">
-      <h1>LogIn</h1>
+      <img src="{{url_for('static', filename='dh.jpeg')}}">
       <form action="" method="post">
         <input type="text" placeholder="Username" name="username" value="{{request.form.username}}">
         <input type="password" placeholder="Password" name="password" value="{{request.form.password}}">
