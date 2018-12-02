@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Journal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="text/javascript" href="{{url_for('static', filename='public/index.js')}}"/> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Date</a>
+      <button class="myButton" type="submit">To Do</button>
+    </nav>
+    <div id="myDIV">
+<!-- morning -->
+      <div class="container">
+        <p>&#x2600;&#xFE0F;</p>
+        <textarea id="morning" class="input" autofocus placeholder="This morning I'm grateful for..."></textarea>
+      </div>
+
+<!-- goals -->
+      <div class="container">
+        <p>&#x1F525;</p>
+        <textarea id="goal" class="input" autofocus placeholder="My goal for today is..."></textarea>
+      </div>
+
+<!-- target -->
+      <div class="container">
+        <p>&#x1F3AF;</p>
+        <textarea id="target" class="input" autofocus placeholder="Today's Target:"></textarea>
+      </div>
+
+<!-- wins -->
+      <div class="container">
+        <p>&#x1F3C6;</p>
+        <textarea id="wins" class="input" autofocus placeholder="Today's Wins:"></textarea>
+      </div>
+
+<!-- tonight -->
+      <div class="container">
+        <p>&#x1F319;</p>
+        <textarea id="tonight" class="input" autofocus placeholder="Tonight I'm grateful for..."></textarea>
+      </div>
+      <button class="save">Save</button>
+    </div>
+
+  </body>
+</html>
